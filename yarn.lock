@@ -5,6 +5,30 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
+"@auth/core@npm:0.40.0":
+  version: 0.40.0
+  resolution: "@auth/core@npm:0.40.0"
+  dependencies:
+    "@panva/hkdf": "npm:^1.2.1"
+    jose: "npm:^6.0.6"
+    oauth4webapi: "npm:^3.3.0"
+    preact: "npm:10.24.3"
+    preact-render-to-string: "npm:6.5.11"
+  peerDependencies:
+    "@simplewebauthn/browser": ^9.0.1
+    "@simplewebauthn/server": ^9.0.2
+    nodemailer: ^6.8.0
+  peerDependenciesMeta:
+    "@simplewebauthn/browser":
+      optional: true
+    "@simplewebauthn/server":
+      optional: true
+    nodemailer:
+      optional: true
+  checksum: 10c0/25cd12f22611eedc21c17dc1908fa9428ae5f0e32eb32c1ab009642276c37099cce58f49ffbb7f8e8d6d6488d5101a24fb9808ec662eee5aca19d520750acaa3
+  languageName: node
+  linkType: hard
+
 "@emnapi/runtime@npm:^1.4.4":
   version: 1.4.5
   resolution: "@emnapi/runtime@npm:1.4.5"
@@ -215,66 +239,73 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:15.4.2-canary.44":
-  version: 15.4.2-canary.44
-  resolution: "@next/env@npm:15.4.2-canary.44"
-  checksum: 10c0/7d18e1773c234a3770de351e74fcbc11a8aa87369600912e49e0176f0c3757167aa9994f0fad90daa3fa40bff850168495c2f7c513a95b8e4ff3040f41411100
+"@next/env@npm:15.4.2-canary.48":
+  version: 15.4.2-canary.48
+  resolution: "@next/env@npm:15.4.2-canary.48"
+  checksum: 10c0/0a07ece1403ea5c92b1e7b01b93ca42017fc5cb7837af5536572ce31f4bf61b2642f2107b06d1bfb39602f820b5af9de36b93afa18f8b2720ad37f8ffd76e30d
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:15.4.2-canary.44":
-  version: 15.4.2-canary.44
-  resolution: "@next/swc-darwin-arm64@npm:15.4.2-canary.44"
+"@next/swc-darwin-arm64@npm:15.4.2-canary.48":
+  version: 15.4.2-canary.48
+  resolution: "@next/swc-darwin-arm64@npm:15.4.2-canary.48"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:15.4.2-canary.44":
-  version: 15.4.2-canary.44
-  resolution: "@next/swc-darwin-x64@npm:15.4.2-canary.44"
+"@next/swc-darwin-x64@npm:15.4.2-canary.48":
+  version: 15.4.2-canary.48
+  resolution: "@next/swc-darwin-x64@npm:15.4.2-canary.48"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-gnu@npm:15.4.2-canary.44":
-  version: 15.4.2-canary.44
-  resolution: "@next/swc-linux-arm64-gnu@npm:15.4.2-canary.44"
+"@next/swc-linux-arm64-gnu@npm:15.4.2-canary.48":
+  version: 15.4.2-canary.48
+  resolution: "@next/swc-linux-arm64-gnu@npm:15.4.2-canary.48"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-musl@npm:15.4.2-canary.44":
-  version: 15.4.2-canary.44
-  resolution: "@next/swc-linux-arm64-musl@npm:15.4.2-canary.44"
+"@next/swc-linux-arm64-musl@npm:15.4.2-canary.48":
+  version: 15.4.2-canary.48
+  resolution: "@next/swc-linux-arm64-musl@npm:15.4.2-canary.48"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:15.4.2-canary.44":
-  version: 15.4.2-canary.44
-  resolution: "@next/swc-linux-x64-gnu@npm:15.4.2-canary.44"
+"@next/swc-linux-x64-gnu@npm:15.4.2-canary.48":
+  version: 15.4.2-canary.48
+  resolution: "@next/swc-linux-x64-gnu@npm:15.4.2-canary.48"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-musl@npm:15.4.2-canary.44":
-  version: 15.4.2-canary.44
-  resolution: "@next/swc-linux-x64-musl@npm:15.4.2-canary.44"
+"@next/swc-linux-x64-musl@npm:15.4.2-canary.48":
+  version: 15.4.2-canary.48
+  resolution: "@next/swc-linux-x64-musl@npm:15.4.2-canary.48"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-win32-arm64-msvc@npm:15.4.2-canary.44":
-  version: 15.4.2-canary.44
-  resolution: "@next/swc-win32-arm64-msvc@npm:15.4.2-canary.44"
+"@next/swc-win32-arm64-msvc@npm:15.4.2-canary.48":
+  version: 15.4.2-canary.48
+  resolution: "@next/swc-win32-arm64-msvc@npm:15.4.2-canary.48"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-win32-x64-msvc@npm:15.4.2-canary.44":
-  version: 15.4.2-canary.44
-  resolution: "@next/swc-win32-x64-msvc@npm:15.4.2-canary.44"
+"@next/swc-win32-x64-msvc@npm:15.4.2-canary.48":
+  version: 15.4.2-canary.48
+  resolution: "@next/swc-win32-x64-msvc@npm:15.4.2-canary.48"
   conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@panva/hkdf@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "@panva/hkdf@npm:1.2.1"
+  checksum: 10c0/1fabdec9bd2c19b8e88a3fa6fd0c25e25823c5000d9efdf4b6dfe32e9f370f8b9603cf776d120d160bec15fba17e079974cc34f0f52cebb24602cd832dfde19c
   languageName: node
   linkType: hard
 
@@ -376,6 +407,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jose@npm:^6.0.6":
+  version: 6.0.12
+  resolution: "jose@npm:6.0.12"
+  checksum: 10c0/e5ca51b078b2443f6ca671e14d72e0ffd21b760dac0d77cabd7af649a127376ec90665c8b25f34dd88bb31094915ee662daf76e0b33a025d28dbc2bc17413dec
+  languageName: node
+  linkType: hard
+
 "nanoid@npm:^3.3.6":
   version: 3.3.11
   resolution: "nanoid@npm:3.3.11"
@@ -385,19 +423,41 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:canary":
-  version: 15.4.2-canary.44
-  resolution: "next@npm:15.4.2-canary.44"
+"next-auth@npm:5.0.0-beta.29":
+  version: 5.0.0-beta.29
+  resolution: "next-auth@npm:5.0.0-beta.29"
   dependencies:
-    "@next/env": "npm:15.4.2-canary.44"
-    "@next/swc-darwin-arm64": "npm:15.4.2-canary.44"
-    "@next/swc-darwin-x64": "npm:15.4.2-canary.44"
-    "@next/swc-linux-arm64-gnu": "npm:15.4.2-canary.44"
-    "@next/swc-linux-arm64-musl": "npm:15.4.2-canary.44"
-    "@next/swc-linux-x64-gnu": "npm:15.4.2-canary.44"
-    "@next/swc-linux-x64-musl": "npm:15.4.2-canary.44"
-    "@next/swc-win32-arm64-msvc": "npm:15.4.2-canary.44"
-    "@next/swc-win32-x64-msvc": "npm:15.4.2-canary.44"
+    "@auth/core": "npm:0.40.0"
+  peerDependencies:
+    "@simplewebauthn/browser": ^9.0.1
+    "@simplewebauthn/server": ^9.0.2
+    next: ^14.0.0-0 || ^15.0.0-0
+    nodemailer: ^6.6.5
+    react: ^18.2.0 || ^19.0.0-0
+  peerDependenciesMeta:
+    "@simplewebauthn/browser":
+      optional: true
+    "@simplewebauthn/server":
+      optional: true
+    nodemailer:
+      optional: true
+  checksum: 10c0/2c6bada9a5f28a9a172d3ad295bfb05b648a4fced01f9988154df1ebca712cf460fb49173ada4c26de4c7ab180256f40ac19d16e2147c1c68f2a7475ab5d5ea8
+  languageName: node
+  linkType: hard
+
+"next@npm:canary":
+  version: 15.4.2-canary.48
+  resolution: "next@npm:15.4.2-canary.48"
+  dependencies:
+    "@next/env": "npm:15.4.2-canary.48"
+    "@next/swc-darwin-arm64": "npm:15.4.2-canary.48"
+    "@next/swc-darwin-x64": "npm:15.4.2-canary.48"
+    "@next/swc-linux-arm64-gnu": "npm:15.4.2-canary.48"
+    "@next/swc-linux-arm64-musl": "npm:15.4.2-canary.48"
+    "@next/swc-linux-x64-gnu": "npm:15.4.2-canary.48"
+    "@next/swc-linux-x64-musl": "npm:15.4.2-canary.48"
+    "@next/swc-win32-arm64-msvc": "npm:15.4.2-canary.48"
+    "@next/swc-win32-x64-msvc": "npm:15.4.2-canary.48"
     "@swc/helpers": "npm:0.5.15"
     caniuse-lite: "npm:^1.0.30001579"
     postcss: "npm:8.4.31"
@@ -440,7 +500,14 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: 10c0/b02183632051776d605df4f34129a5192e9c691971780defeba7a7064f3bd39e8255a3464be0228c08e9ce35dda14accc393ecb9f1edbdaf4006e733f43697b6
+  checksum: 10c0/346060477551286f4ab7d2102ac1c901109f038e7d349893924021b9b9c86d970339ee352876cae97dc387200d15b71eeb298ab37c16f40f22fcd15fa464b74e
+  languageName: node
+  linkType: hard
+
+"oauth4webapi@npm:^3.3.0":
+  version: 3.7.0
+  resolution: "oauth4webapi@npm:3.7.0"
+  checksum: 10c0/eb357ceade4e26f0acacd2dc9821d4128d85fe803d853cfc80979cbc2862f1a854743b77f923a08f1e81f4fd2b7823d0c3f3ba196a2bf6a1eff421c6a4f1c430
   languageName: node
   linkType: hard
 
@@ -459,6 +526,22 @@ __metadata:
     picocolors: "npm:^1.0.0"
     source-map-js: "npm:^1.0.2"
   checksum: 10c0/748b82e6e5fc34034dcf2ae88ea3d11fd09f69b6c50ecdd3b4a875cfc7cdca435c958b211e2cb52355422ab6fccb7d8f2f2923161d7a1b281029e4a913d59acf
+  languageName: node
+  linkType: hard
+
+"preact-render-to-string@npm:6.5.11":
+  version: 6.5.11
+  resolution: "preact-render-to-string@npm:6.5.11"
+  peerDependencies:
+    preact: ">=10"
+  checksum: 10c0/a68b704c1343756022fb41322154b45e39f6021b940cbc97e86c292627d017d019700339a17d67b42c308b14fc5323fc120c798f785d6a3e993c8f273610bfe2
+  languageName: node
+  linkType: hard
+
+"preact@npm:10.24.3":
+  version: 10.24.3
+  resolution: "preact@npm:10.24.3"
+  checksum: 10c0/c863df6d7be6a660480189762d8a8f2d4148733fc2bb9efbd9d2fd27315d2c7ede850a16077d716c91666c915c0349bd3c9699733e4f08457226a0519f408761
   languageName: node
   linkType: hard
 
@@ -487,6 +570,7 @@ __metadata:
     "@types/node": "npm:^22"
     "@types/react": "npm:^19"
     next: "npm:canary"
+    next-auth: "npm:5.0.0-beta.29"
     react: "npm:19.1.1"
     react-dom: "npm:19.1.1"
     typescript: "npm:^5"

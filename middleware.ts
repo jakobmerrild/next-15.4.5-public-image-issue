@@ -1,9 +1,16 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 
-export default function middleware(req: NextRequest) {
-  // Dummy middleware just to try and be as close to the original application as possible
+import { auth } from '@/auth';
+
+export default auth((req) => {
+  if (!req.auth) {
+    const signInUrl = new URL('/api/auth/signin', req.nextUrl.origin);
+    signInUrl.searchParams.set('callbackUrl', '/');
+    return NextResponse.redirect(signInUrl);
+  }
+
   return NextResponse.next();
-}
+});
 
 export const config = {
   matcher: [
@@ -14,8 +21,7 @@ export const config = {
      * - health (Health check route)
      * - _next/static (static files)
      * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
      */
-    '/((?!login|api|health|_next/static|_next/image|favicon.ico|logo.svg).*)',
+    '/((?!login|api|health|_next/static|_next/image).*)',
   ],
 };
